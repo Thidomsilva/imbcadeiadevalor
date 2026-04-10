@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMB Brasil | POPs ISO 9001</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/imb-pops.css">
+</head>
+<body>
+<div class="doc-root">
+
+<div class="doc-header">
+  <div class="dh-top">
+    <div class="dh-brand">
+      <div class="dh-logo">IMB</div>
+      <div>
+        <div class="dh-name">IMB Brasil — Indústria Metalúrgica Ltda.</div>
+        <div class="dh-sub">Manual de Procedimentos Operacionais Padrão · Cadeia de Valor Completa</div>
+      </div>
+    </div>
+    <div class="dh-meta">
+      <div class="dh-doc-num">DOC-POP-IMB-001 · REV. 01</div>
+      <div class="dh-doc-title">Referência: ISO 9001:2015 — Cláusula 8.1 / 8.5</div>
+      <div class="dh-norm">Campina Grande do Sul/PR · Extrusoras de Concreto · Desde 1992</div>
+    </div>
+  </div>
+  <div class="dh-kpis">
+    <div class="dh-kpi"><div class="dh-kpi-n">24</div><div class="dh-kpi-l">POPs documentados</div></div>
+    <div class="dh-kpi"><div class="dh-kpi-n">10</div><div class="dh-kpi-l">Setores cobertos</div></div>
+    <div class="dh-kpi"><div class="dh-kpi-n cr">9</div><div class="dh-kpi-l">Etapas críticas</div></div>
+    <div class="dh-kpi"><div class="dh-kpi-n am">10</div><div class="dh-kpi-l">Em oportunidade</div></div>
+    <div class="dh-kpi"><div class="dh-kpi-n ok">5</div><div class="dh-kpi-l">Estruturadas</div></div>
+  </div>
+</div>
+
+<div class="doc-overview">
+  <div class="ov-copy">
+    <span class="ov-eyebrow">Fluxo IMB</span>
+    <h2 class="ov-title">Mapa operacional da cadeia de valor com foco em execução, rastreabilidade e melhoria contínua</h2>
+    <p class="ov-text">Visual estruturado para leitura rápida do processo ponta a ponta, com exportação para uso em implantação, auditoria e revisão gerencial.</p>
+  </div>
+  <div class="ov-grid" id="overview"></div>
+</div>
+
+<div class="doc-toolbar">
+  <span class="tb-label">Filtrar</span>
+  <div class="tb-filters" id="fbar"></div>
+  <div class="tb-actions">
+    <button class="tb-act" onclick="exportMarkdown()">Exportar Markdown</button>
+    <button class="tb-act" onclick="exportJson()">Exportar JSON</button>
+    <button class="tb-act tb-act-strong" onclick="exportPrint()">Imprimir / PDF</button>
+  </div>
+</div>
+
+<div class="doc-search">
+  <div class="search-wrap">
+    <svg class="search-ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6.5" cy="6.5" r="4.5"/><path d="m11 11 3 3"/></svg>
+    <input class="srch" id="srch" type="text" placeholder="Buscar por etapa, setor, ferramenta, problema...">
+  </div>
+</div>
+
+<div class="doc-cnt"><span class="cnt-txt" id="cnt"></span></div>
+
+<div class="pop-list" id="lista"></div>
+
+<div class="iso-footer">
+  <span class="iso-footer-left">IMB-POP-001 · ISO 9001:2015 · Cláusula 8.1, 8.5 · Rev.01 · 2025</span>
+  <span class="iso-footer-right">Documento controlado — não reproduzir sem autorização</span>
+</div>
+
+</div>
+
+<script>
+function sendPrompt(message) {
+  if (typeof window.parent !== 'undefined' && typeof window.parent.postMessage === 'function') {
+    window.parent.postMessage({ type: 'imb-prompt', message: message }, '*');
+    return;
+  }
+  window.alert(message);
+}
+</script>
+<script src="assets/js/imb-pops-data.js"></script>
+<script src="assets/js/imb-pops-app.js"></script>
+</body>
+</html>
